@@ -1,4 +1,4 @@
-import PORT from "./config.js";
+const PORT = require("./config");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -28,5 +28,5 @@ app.use(cors());
 app.get("/api/notes", (request, response) => {
   response.json(notes);
 });
-
-app.listen(PORT);
+console.log(PORT.PORT);
+app.listen(PORT.PORT);
