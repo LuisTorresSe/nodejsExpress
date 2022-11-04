@@ -25,6 +25,9 @@ const notes = [
 ];
 app.use(express.static("build"));
 app.use(cors());
+
+// app.get("/", (request, response) => {
+//   response.json);
 app.get("/api/notes", (request, response) => {
   response.json(notes);
 });
